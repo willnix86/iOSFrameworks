@@ -1,0 +1,6 @@
+framework module Pods_AuthenticationService_AuthenticationServiceTests {
+  umbrella header "Pods-AuthenticationService-AuthenticationServiceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
