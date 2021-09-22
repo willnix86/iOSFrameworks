@@ -15,7 +15,7 @@ public class EmailAuthController: NSObject {
   public var email: String?
   public var password: String?
 
-  override init() {
+  public override init() {
     super.init()
 
     configure(Auth.auth().currentUser)
@@ -59,7 +59,7 @@ extension EmailAuthController {
       if let error = authError as NSError? {
         delegate?.authenticator(self, didErrorWith: error)
       } else {
-        delegate?.authenticator(self, didErrorWith: Alerts.passwordReset.message)
+        delegate?.authenticator(self, didErrorWith: AuthError.passwordReset.rawValue)
       }
     }
   }
@@ -91,13 +91,13 @@ extension EmailAuthController: Authenticator {
       if let displayName = currentUser.displayName {
         changeDisplayName(to: displayName)
       }
-      if let profilePic = PersistenceController.shared.fetchProfilePic() {
-        changeProfilePicData(to: profilePic)
-      } else {
+//      if let profilePic = PersistenceController.shared.fetchProfilePic() {
+//        changeProfilePicData(to: profilePic)
+//      } else {
         if let url = currentUser.photoURL {
           changeProfilePicURL(to: url)
         }
-      }
+//      }
       delegate?.authenticator(self, didUpdateStateTo: .authenticated)
     } else {
       delegate?.authenticator(self, didUpdateStateTo: .unauthenticated)

@@ -8,10 +8,10 @@
 import Foundation
 
 public class AuthUser {
-  var userID: String?
-  var displayName: String?
-  var profilePic: Data?
-  var state: AuthState = .unauthenticated
+  public var userID: String?
+  public var displayName: String?
+  public var profilePic: Data?
+  public var state: AuthState = .unauthenticated
 
   public func setUserID(id: String) {
     userID = id

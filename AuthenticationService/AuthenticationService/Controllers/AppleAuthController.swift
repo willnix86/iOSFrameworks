@@ -20,7 +20,7 @@ public class AppleAuthController: NSObject {
   public var delegate: AuthenticatorDelegate?
   public var credential: AuthCredential?
 
-  init(appWindow: UIWindow?) {
+  public init(appWindow: UIWindow?) {
     super.init()
     if appWindow != nil {
       window = appWindow
@@ -78,13 +78,13 @@ extension AppleAuthController: Authenticator {
       if let displayName = currentUser.displayName {
         changeDisplayName(to: displayName)
       }
-      if let profilePic = PersistenceController.shared.fetchProfilePic() {
-        changeProfilePicData(to: profilePic)
-      } else {
+//      if let profilePic = PersistenceController.shared.fetchProfilePic() {
+//        changeProfilePicData(to: profilePic)
+//      } else {
         if let url = currentUser.photoURL {
           changeProfilePicURL(to: url)
         }
-      }
+//      }
       delegate?.authenticator(self, didUpdateStateTo: .authenticated)
     } else {
       delegate?.authenticator(self, didUpdateStateTo: .unauthenticated)

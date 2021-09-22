@@ -14,7 +14,7 @@ public class GoogleAuthController: NSObject {
   public var delegate: AuthenticatorDelegate?
   public var credential: AuthCredential?
 
-  override init() {
+  public override init() {
     super.init()
     GIDSignIn.sharedInstance().delegate = self
 
@@ -65,13 +65,13 @@ extension GoogleAuthController: Authenticator {
           self.changeDisplayName(to: displayName)
         }
       }
-      if let profilePic = PersistenceController.shared.fetchProfilePic() {
-        changeProfilePicData(to: profilePic)
-      } else {
+//      if let profilePic = PersistenceController.shared.fetchProfilePic() {
+//        changeProfilePicData(to: profilePic)
+//      } else {
         if let url = currentUser.photoURL {
           changeProfilePicURL(to: url)
         }
-      }
+//      }
       delegate?.authenticator(self, didUpdateStateTo: .authenticated)
     } else {
       delegate?.authenticator(self, didUpdateStateTo: .unauthenticated)

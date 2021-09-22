@@ -7,19 +7,30 @@
 
 import FirebaseAuth
 import Foundation
+import Firebase
+import GoogleSignIn
 
-class Authentication: NSObject, ObservableObject {
-  @Published var controller: Authenticator? {
+public class Authentication: NSObject, ObservableObject {
+  public static func setupApp() {
+    FirebaseApp.configure()
+    GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+  }
+  
+  public static func handleGoogleSignin(_ url: URL) -> Bool {
+    return GIDSignIn.sharedInstance().handle(url)
+  }
+  
+  @Published public var controller: Authenticator? {
     didSet {
       if var controller = controller {
         controller.delegate = self
       }
     }
   }
-  @Published var authenticated: AuthState = .unauthenticated
-  @Published var displayName: String?
-  @Published var profilePic: Data?
-  @Published var error: String? {
+  @Published public var authenticated: AuthState = .unauthenticated
+  @Published public var displayName: String?
+  @Published public var profilePic: Data?
+  @Published public var error: String? {
     didSet {
       if let error = error {
         if !error.isEmpty {
@@ -28,9 +39,9 @@ class Authentication: NSObject, ObservableObject {
       }
     }
   }
-  @Published var showingAlert = false
+  @Published public var showingAlert = false
 
-  override init() {
+  public override init() {
     super.init()
     if let providerData = Auth.auth().currentUser?.providerData {
       switch providerData[0].providerID {
@@ -80,20 +91,20 @@ extension Authentication {
 }
 
 extension Authentication: AuthenticatorDelegate {
-  func authenticator(_ authenticator: Authenticator, didUpdateStateTo authState: AuthState) {
+  public func authenticator(_ authenticator: Authenticator, didUpdateStateTo authState: AuthState) {
     authenticated = authState
   }
 
-  func authenticator(_ authenticator: Authenticator, didUpdateUser user: AuthUser) {
+  public func authenticator(_ authenticator: Authenticator, didUpdateUser user: AuthUser) {
     displayName = user.displayName
     profilePic = user.profilePic
   }
 
-  func authenticator(_ authenticator: Authenticator, didErrorWith authError: NSError) {
+  public func authenticator(_ authenticator: Authenticator, didErrorWith authError: NSError) {
     handleError(authError: authError)
   }
 
-  func authenticator(_ authenticator: Authenticator, didErrorWith errorMessage: String) {
+  public func authenticator(_ authenticator: Authenticator, didErrorWith errorMessage: String) {
     error = errorMessage
   }
 }

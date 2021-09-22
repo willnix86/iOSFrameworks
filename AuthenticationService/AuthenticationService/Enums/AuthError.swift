@@ -19,5 +19,6 @@ public enum AuthError: String, Swift.Error {
   case authError = "Error signing in"
   case missingDetails = "Please input your email address and password"
   case passwordRequired = "A password is required"
+  case passwordReset = "Please check your email to finish resetting your password."
   case signOutError = "Error signing out"
 }
