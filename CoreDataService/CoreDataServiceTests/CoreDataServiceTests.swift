@@ -1,14 +1,14 @@
 //
-//  AuthenticationServiceTests.swift
-//  AuthenticationServiceTests
+//  CoreDataServiceTests.swift
+//  CoreDataServiceTests
 //
-//  Created by Will Nixon on 9/22/21.
+//  Created by Will Nixon on 9/21/21.
 //
 
 import XCTest
-@testable import AuthenticationService
+@testable import CoreDataService
 
-class AuthenticationServiceTests: XCTestCase {
+class CoreDataServiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

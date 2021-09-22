@@ -7,169 +7,153 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E63C7DC426FB4861007F7179 /* AuthenticationService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63C7DBA26FB4860007F7179 /* AuthenticationService.framework */; };
-		E63C7DC926FB4861007F7179 /* AuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C7DC826FB4861007F7179 /* AuthenticationServiceTests.swift */; };
-		E63C7DCB26FB4861007F7179 /* AuthenticationService.h in Headers */ = {isa = PBXBuildFile; fileRef = E63C7DBD26FB4860007F7179 /* AuthenticationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E63C7DD926FB48E6007F7179 /* Enums in Resources */ = {isa = PBXBuildFile; fileRef = E63C7DD426FB48E6007F7179 /* Enums */; };
-		E63C7DDA26FB48E6007F7179 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = E63C7DD526FB48E6007F7179 /* Models */; };
-		E63C7DDB26FB48E6007F7179 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63C7DD626FB48E6007F7179 /* Authentication.swift */; };
-		E63C7DDC26FB48E6007F7179 /* Protocols in Resources */ = {isa = PBXBuildFile; fileRef = E63C7DD726FB48E6007F7179 /* Protocols */; };
-		E63C7DDD26FB48E6007F7179 /* Controllers in Resources */ = {isa = PBXBuildFile; fileRef = E63C7DD826FB48E6007F7179 /* Controllers */; };
+		E63098C226FA24FB0019B129 /* CoreDataService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63098B826FA24FB0019B129 /* CoreDataService.framework */; };
+		E63098C726FA24FB0019B129 /* CoreDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63098C626FA24FB0019B129 /* CoreDataServiceTests.swift */; };
+		E63098C926FA24FB0019B129 /* CoreDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = E63098BB26FA24FB0019B129 /* CoreDataService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E63C7DC526FB4861007F7179 /* PBXContainerItemProxy */ = {
+		E63098C326FA24FB0019B129 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E63C7DB126FB4860007F7179 /* Project object */;
+			containerPortal = E63098AF26FA24FB0019B129 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E63C7DB926FB4860007F7179;
-			remoteInfo = AuthenticationService;
+			remoteGlobalIDString = E63098B726FA24FB0019B129;
+			remoteInfo = CoreDataService;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E63C7DBA26FB4860007F7179 /* AuthenticationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AuthenticationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E63C7DBD26FB4860007F7179 /* AuthenticationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationService.h; sourceTree = "<group>"; };
-		E63C7DBE26FB4860007F7179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E63C7DC326FB4861007F7179 /* AuthenticationServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticationServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E63C7DC826FB4861007F7179 /* AuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceTests.swift; sourceTree = "<group>"; };
-		E63C7DCA26FB4861007F7179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E63C7DD426FB48E6007F7179 /* Enums */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Enums; sourceTree = "<group>"; };
-		E63C7DD526FB48E6007F7179 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		E63C7DD626FB48E6007F7179 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
-		E63C7DD726FB48E6007F7179 /* Protocols */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Protocols; sourceTree = "<group>"; };
-		E63C7DD826FB48E6007F7179 /* Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controllers; sourceTree = "<group>"; };
+		E63098B826FA24FB0019B129 /* CoreDataService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63098BB26FA24FB0019B129 /* CoreDataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
+		E63098BC26FA24FB0019B129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63098C126FA24FB0019B129 /* CoreDataServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63098C626FA24FB0019B129 /* CoreDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceTests.swift; sourceTree = "<group>"; };
+		E63098C826FA24FB0019B129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E63C7DB726FB4860007F7179 /* Frameworks */ = {
+		E63098B526FA24FB0019B129 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E63C7DC026FB4861007F7179 /* Frameworks */ = {
+		E63098BE26FA24FB0019B129 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63C7DC426FB4861007F7179 /* AuthenticationService.framework in Frameworks */,
+				E63098C226FA24FB0019B129 /* CoreDataService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E63C7DB026FB4860007F7179 = {
+		E63098AE26FA24FB0019B129 = {
 			isa = PBXGroup;
 			children = (
-				E63C7DBC26FB4860007F7179 /* AuthenticationService */,
-				E63C7DC726FB4861007F7179 /* AuthenticationServiceTests */,
-				E63C7DBB26FB4860007F7179 /* Products */,
+				E63098BA26FA24FB0019B129 /* CoreDataService */,
+				E63098C526FA24FB0019B129 /* CoreDataServiceTests */,
+				E63098B926FA24FB0019B129 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E63C7DBB26FB4860007F7179 /* Products */ = {
+		E63098B926FA24FB0019B129 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E63C7DBA26FB4860007F7179 /* AuthenticationService.framework */,
-				E63C7DC326FB4861007F7179 /* AuthenticationServiceTests.xctest */,
+				E63098B826FA24FB0019B129 /* CoreDataService.framework */,
+				E63098C126FA24FB0019B129 /* CoreDataServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E63C7DBC26FB4860007F7179 /* AuthenticationService */ = {
+		E63098BA26FA24FB0019B129 /* CoreDataService */ = {
 			isa = PBXGroup;
 			children = (
-				E63C7DD626FB48E6007F7179 /* Authentication.swift */,
-				E63C7DD826FB48E6007F7179 /* Controllers */,
-				E63C7DD426FB48E6007F7179 /* Enums */,
-				E63C7DD526FB48E6007F7179 /* Models */,
-				E63C7DD726FB48E6007F7179 /* Protocols */,
-				E63C7DBD26FB4860007F7179 /* AuthenticationService.h */,
-				E63C7DBE26FB4860007F7179 /* Info.plist */,
+				E63098BB26FA24FB0019B129 /* CoreDataService.h */,
+				E63098BC26FA24FB0019B129 /* Info.plist */,
 			);
-			path = AuthenticationService;
+			path = CoreDataService;
 			sourceTree = "<group>";
 		};
-		E63C7DC726FB4861007F7179 /* AuthenticationServiceTests */ = {
+		E63098C526FA24FB0019B129 /* CoreDataServiceTests */ = {
 			isa = PBXGroup;
 			children = (
-				E63C7DC826FB4861007F7179 /* AuthenticationServiceTests.swift */,
-				E63C7DCA26FB4861007F7179 /* Info.plist */,
+				E63098C626FA24FB0019B129 /* CoreDataServiceTests.swift */,
+				E63098C826FA24FB0019B129 /* Info.plist */,
 			);
-			path = AuthenticationServiceTests;
+			path = CoreDataServiceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E63C7DB526FB4860007F7179 /* Headers */ = {
+		E63098B326FA24FB0019B129 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63C7DCB26FB4861007F7179 /* AuthenticationService.h in Headers */,
+				E63098C926FA24FB0019B129 /* CoreDataService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E63C7DB926FB4860007F7179 /* AuthenticationService */ = {
+		E63098B726FA24FB0019B129 /* CoreDataService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E63C7DCE26FB4861007F7179 /* Build configuration list for PBXNativeTarget "AuthenticationService" */;
+			buildConfigurationList = E63098CC26FA24FB0019B129 /* Build configuration list for PBXNativeTarget "CoreDataService" */;
 			buildPhases = (
-				E63C7DB526FB4860007F7179 /* Headers */,
-				E63C7DB626FB4860007F7179 /* Sources */,
-				E63C7DB726FB4860007F7179 /* Frameworks */,
-				E63C7DB826FB4860007F7179 /* Resources */,
+				E63098B326FA24FB0019B129 /* Headers */,
+				E63098B426FA24FB0019B129 /* Sources */,
+				E63098B526FA24FB0019B129 /* Frameworks */,
+				E63098B626FA24FB0019B129 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AuthenticationService;
-			productName = AuthenticationService;
-			productReference = E63C7DBA26FB4860007F7179 /* AuthenticationService.framework */;
+			name = CoreDataService;
+			productName = CoreDataService;
+			productReference = E63098B826FA24FB0019B129 /* CoreDataService.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E63C7DC226FB4861007F7179 /* AuthenticationServiceTests */ = {
+		E63098C026FA24FB0019B129 /* CoreDataServiceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E63C7DD126FB4861007F7179 /* Build configuration list for PBXNativeTarget "AuthenticationServiceTests" */;
+			buildConfigurationList = E63098CF26FA24FB0019B129 /* Build configuration list for PBXNativeTarget "CoreDataServiceTests" */;
 			buildPhases = (
-				E63C7DBF26FB4861007F7179 /* Sources */,
-				E63C7DC026FB4861007F7179 /* Frameworks */,
-				E63C7DC126FB4861007F7179 /* Resources */,
+				E63098BD26FA24FB0019B129 /* Sources */,
+				E63098BE26FA24FB0019B129 /* Frameworks */,
+				E63098BF26FA24FB0019B129 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E63C7DC626FB4861007F7179 /* PBXTargetDependency */,
+				E63098C426FA24FB0019B129 /* PBXTargetDependency */,
 			);
-			name = AuthenticationServiceTests;
-			productName = AuthenticationServiceTests;
-			productReference = E63C7DC326FB4861007F7179 /* AuthenticationServiceTests.xctest */;
+			name = CoreDataServiceTests;
+			productName = CoreDataServiceTests;
+			productReference = E63098C126FA24FB0019B129 /* CoreDataServiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E63C7DB126FB4860007F7179 /* Project object */ = {
+		E63098AF26FA24FB0019B129 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					E63C7DB926FB4860007F7179 = {
+					E63098B726FA24FB0019B129 = {
 						CreatedOnToolsVersion = 12.5;
-						LastSwiftMigration = 1250;
 					};
-					E63C7DC226FB4861007F7179 = {
+					E63098C026FA24FB0019B129 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = E63C7DB426FB4860007F7179 /* Build configuration list for PBXProject "AuthenticationService" */;
+			buildConfigurationList = E63098B226FA24FB0019B129 /* Build configuration list for PBXProject "CoreDataService" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -177,30 +161,26 @@
 				en,
 				Base,
 			);
-			mainGroup = E63C7DB026FB4860007F7179;
-			productRefGroup = E63C7DBB26FB4860007F7179 /* Products */;
+			mainGroup = E63098AE26FA24FB0019B129;
+			productRefGroup = E63098B926FA24FB0019B129 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E63C7DB926FB4860007F7179 /* AuthenticationService */,
-				E63C7DC226FB4861007F7179 /* AuthenticationServiceTests */,
+				E63098B726FA24FB0019B129 /* CoreDataService */,
+				E63098C026FA24FB0019B129 /* CoreDataServiceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E63C7DB826FB4860007F7179 /* Resources */ = {
+		E63098B626FA24FB0019B129 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63C7DDC26FB48E6007F7179 /* Protocols in Resources */,
-				E63C7DDA26FB48E6007F7179 /* Models in Resources */,
-				E63C7DDD26FB48E6007F7179 /* Controllers in Resources */,
-				E63C7DD926FB48E6007F7179 /* Enums in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E63C7DC126FB4861007F7179 /* Resources */ = {
+		E63098BF26FA24FB0019B129 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,34 +190,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E63C7DB626FB4860007F7179 /* Sources */ = {
+		E63098B426FA24FB0019B129 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63C7DDB26FB48E6007F7179 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E63C7DBF26FB4861007F7179 /* Sources */ = {
+		E63098BD26FA24FB0019B129 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63C7DC926FB4861007F7179 /* AuthenticationServiceTests.swift in Sources */,
+				E63098C726FA24FB0019B129 /* CoreDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E63C7DC626FB4861007F7179 /* PBXTargetDependency */ = {
+		E63098C426FA24FB0019B129 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E63C7DB926FB4860007F7179 /* AuthenticationService */;
-			targetProxy = E63C7DC526FB4861007F7179 /* PBXContainerItemProxy */;
+			target = E63098B726FA24FB0019B129 /* CoreDataService */;
+			targetProxy = E63098C326FA24FB0019B129 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		E63C7DCC26FB4861007F7179 /* Debug */ = {
+		E63098CA26FA24FB0019B129 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -301,7 +280,7 @@
 			};
 			name = Debug;
 		};
-		E63C7DCD26FB4861007F7179 /* Release */ = {
+		E63098CB26FA24FB0019B129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -347,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -359,50 +338,47 @@
 			};
 			name = Release;
 		};
-		E63C7DCF26FB4861007F7179 /* Debug */ = {
+		E63098CD26FA24FB0019B129 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U25YC5NJV2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AuthenticationService/Info.plist;
+				INFOPLIST_FILE = CoreDataService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.AuthenticationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.CoreDataService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E63C7DD026FB4861007F7179 /* Release */ = {
+		E63098CE26FA24FB0019B129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U25YC5NJV2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AuthenticationService/Info.plist;
+				INFOPLIST_FILE = CoreDataService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.AuthenticationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.CoreDataService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -410,38 +386,36 @@
 			};
 			name = Release;
 		};
-		E63C7DD226FB4861007F7179 /* Debug */ = {
+		E63098D026FA24FB0019B129 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U25YC5NJV2;
-				INFOPLIST_FILE = AuthenticationServiceTests/Info.plist;
+				INFOPLIST_FILE = CoreDataServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.AuthenticationServiceTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.CoreDataServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E63C7DD326FB4861007F7179 /* Release */ = {
+		E63098D126FA24FB0019B129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U25YC5NJV2;
-				INFOPLIST_FILE = AuthenticationServiceTests/Info.plist;
+				INFOPLIST_FILE = CoreDataServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.AuthenticationServiceTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jenix.CoreDataServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,34 +425,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E63C7DB426FB4860007F7179 /* Build configuration list for PBXProject "AuthenticationService" */ = {
+		E63098B226FA24FB0019B129 /* Build configuration list for PBXProject "CoreDataService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E63C7DCC26FB4861007F7179 /* Debug */,
-				E63C7DCD26FB4861007F7179 /* Release */,
+				E63098CA26FA24FB0019B129 /* Debug */,
+				E63098CB26FA24FB0019B129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E63C7DCE26FB4861007F7179 /* Build configuration list for PBXNativeTarget "AuthenticationService" */ = {
+		E63098CC26FA24FB0019B129 /* Build configuration list for PBXNativeTarget "CoreDataService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E63C7DCF26FB4861007F7179 /* Debug */,
-				E63C7DD026FB4861007F7179 /* Release */,
+				E63098CD26FA24FB0019B129 /* Debug */,
+				E63098CE26FA24FB0019B129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E63C7DD126FB4861007F7179 /* Build configuration list for PBXNativeTarget "AuthenticationServiceTests" */ = {
+		E63098CF26FA24FB0019B129 /* Build configuration list for PBXNativeTarget "CoreDataServiceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E63C7DD226FB4861007F7179 /* Debug */,
-				E63C7DD326FB4861007F7179 /* Release */,
+				E63098D026FA24FB0019B129 /* Debug */,
+				E63098D126FA24FB0019B129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E63C7DB126FB4860007F7179 /* Project object */;
+	rootObject = E63098AF26FA24FB0019B129 /* Project object */;
 }
