@@ -13,11 +13,10 @@ import GoogleSignIn
 public class Authentication: NSObject, ObservableObject {
   public static func setupApp() {
     FirebaseApp.configure()
-    GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
   }
   
   public static func handleGoogleSignin(_ url: URL) -> Bool {
-    return GIDSignIn.sharedInstance().handle(url)
+    return GIDSignIn.sharedInstance.handle(url)
   }
   
   @Published public var controller: Authenticator? {

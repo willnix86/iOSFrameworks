@@ -5,6 +5,7 @@
 //  Created by Will Nixon on 7/26/21.
 //
 
+import Firebase
 import FirebaseAuth
 import Foundation
 import GoogleSignIn
@@ -13,11 +14,12 @@ public class GoogleAuthController: NSObject {
   public var user = AuthUser()
   public var delegate: AuthenticatorDelegate?
   public var credential: AuthCredential?
+  public var clientID: String? {
+    return FirebaseApp.app()?.options.clientID
+  }
 
   public override init() {
     super.init()
-    GIDSignIn.sharedInstance().delegate = self
-
     configure(Auth.auth().currentUser)
 
     Auth.auth().addStateDidChangeListener { [self] (auth, currentUser) in
@@ -30,8 +32,28 @@ extension GoogleAuthController {
   public func startSignInFlow(using viewController: UIViewController?) {
     if viewController != nil {
       delegate?.authenticator(self, didUpdateStateTo: .authenticating)
-      GIDSignIn.sharedInstance()?.presentingViewController = viewController
-      GIDSignIn.sharedInstance().signIn()
+      guard self.clientID != nil else { return }
+      
+      let config = GIDConfiguration(clientID: self.clientID!)
+      
+      GIDSignIn.sharedInstance.signIn(with: config, presenting: viewController!) { [unowned self] user, error in
+        if let error = error {
+          delegate?.authenticator(self, didErrorWith: error.localizedDescription)
+          return
+        }
+        
+        guard
+          let authentication = user?.authentication,
+          let idToken = authentication.idToken
+        else {
+          return
+        }
+        
+        self.credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        self.signIn()
+      }
     }
   }
 }
@@ -58,19 +80,35 @@ extension GoogleAuthController: Authenticator {
 
   public func configure(_ user: User?) {
     if let currentUser = user {
-      if let googleUser = GIDSignIn.sharedInstance().currentUser {
-        self.changeDisplayName(to: googleUser.profile.givenName)
+      if let googleUser = GIDSignIn.sharedInstance.currentUser {
+        if let profile = googleUser.profile {
+          if let name = profile.givenName {
+            self.changeDisplayName(to: name)
+          } else {
+            if let displayName = currentUser.displayName {
+              self.changeDisplayName(to: displayName)
+            }
+          }
+          if let url = profile.imageURL(withDimension: 500) {
+            changeProfilePicURL(to: url)
+          } else {
+            if let url = currentUser.photoURL {
+              changeProfilePicURL(to: url)
+            }
+          }
+        }
       } else {
         if let displayName = currentUser.displayName {
           self.changeDisplayName(to: displayName)
+        }
+        if let url = currentUser.photoURL {
+          changeProfilePicURL(to: url)
         }
       }
 //      if let profilePic = PersistenceController.shared.fetchProfilePic() {
 //        changeProfilePicData(to: profilePic)
 //      } else {
-        if let url = currentUser.photoURL {
-          changeProfilePicURL(to: url)
-        }
+        
 //      }
       delegate?.authenticator(self, didUpdateStateTo: .authenticated)
     } else {
@@ -132,27 +170,27 @@ extension GoogleAuthController: Authenticator {
   }
 }
 
-extension GoogleAuthController: GIDSignInDelegate {
-  public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?)
-  {
-    if error != nil {
-      delegate?.authenticator(self, didErrorWith: error!.localizedDescription)
-      return
-    }
-
-    guard let authentication = user.authentication else { return }
-    credential = GoogleAuthProvider.credential(
-      withIDToken: authentication.idToken,
-      accessToken: authentication.accessToken
-    )
-    self.signIn()
-  }
-
-  public func sign(
-    _ signIn: GIDSignIn!,
-    didDisconnectWith user: GIDGoogleUser!,
-    withError error: Error!
-  ) {
-    signOut()
-  }
-}
+//extension GoogleAuthController: GIDSignInDelegate {
+//  public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?)
+//  {
+//    if error != nil {
+//      delegate?.authenticator(self, didErrorWith: error!.localizedDescription)
+//      return
+//    }
+//
+//    guard let authentication = user.authentication else { return }
+//    credential = GoogleAuthProvider.credential(
+//      withIDToken: authentication.idToken,
+//      accessToken: authentication.accessToken
+//    )
+//    self.signIn()
+//  }
+//
+//  public func sign(
+//    _ signIn: GIDSignIn!,
+//    didDisconnectWith user: GIDGoogleUser!,
+//    withError error: Error!
+//  ) {
+//    signOut()
+//  }
+//}
