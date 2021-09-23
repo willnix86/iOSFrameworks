@@ -220,7 +220,6 @@
 				E63C7DB726FB4860007F7179 /* Frameworks */,
 				E63C7DB826FB4860007F7179 /* Resources */,
 				E63C7DFF26FB5CC4007F7179 /* Embed Frameworks */,
-				01A8747F880C23C6E4985E4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,23 +303,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01A8747F880C23C6E4985E4E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AuthenticationService/Pods-AuthenticationService-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AuthenticationService/Pods-AuthenticationService-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AuthenticationService/Pods-AuthenticationService-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B6DB6108F121DD3801F32865 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
