@@ -95,8 +95,10 @@ extension Authentication: AuthenticatorDelegate {
   }
 
   public func authenticator(_ authenticator: Authenticator, didUpdateUser user: AuthUser) {
-    displayName = user.displayName
-    profilePic = user.profilePic
+    DispatchQueue.main.async {
+      self.displayName = user.displayName
+      self.profilePic = user.profilePic
+    }
   }
 
   public func authenticator(_ authenticator: Authenticator, didErrorWith authError: NSError) {

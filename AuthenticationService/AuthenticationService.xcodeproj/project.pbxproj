@@ -47,10 +47,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		10FF793E0F9250E6C3F63405 /* Pods-AuthenticationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenticationService.release.xcconfig"; path = "Target Support Files/Pods-AuthenticationService/Pods-AuthenticationService.release.xcconfig"; sourceTree = "<group>"; };
 		372604F9DBC679CC07C91580 /* Pods_AuthenticationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthenticationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		505303F5A37B5EFA81FE52CF /* Pods-AuthenticationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenticationService.debug.xcconfig"; path = "Target Support Files/Pods-AuthenticationService/Pods-AuthenticationService.debug.xcconfig"; sourceTree = "<group>"; };
 		5DAE0EDC1BC6CE4AEE270AD3 /* Pods_AuthenticationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthenticationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A731D8E013C7AFC4C0616CFB /* Pods-AuthenticationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenticationService.debug.xcconfig"; path = "Target Support Files/Pods-AuthenticationService/Pods-AuthenticationService.debug.xcconfig"; sourceTree = "<group>"; };
+		727D2A7A84C8BA792F61C966 /* Pods-AuthenticationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenticationService.release.xcconfig"; path = "Target Support Files/Pods-AuthenticationService/Pods-AuthenticationService.release.xcconfig"; sourceTree = "<group>"; };
 		E63C7DBA26FB4860007F7179 /* AuthenticationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AuthenticationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63C7DBD26FB4860007F7179 /* AuthenticationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationService.h; sourceTree = "<group>"; };
 		E63C7DBE26FB4860007F7179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,22 +89,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16BD56F965420CECC9707051 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A731D8E013C7AFC4C0616CFB /* Pods-AuthenticationService.debug.xcconfig */,
-				10FF793E0F9250E6C3F63405 /* Pods-AuthenticationService.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../../endi/ios/Pods;
-			sourceTree = "<group>";
-		};
 		C1D663F33FEE34AC7380D897 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				5DAE0EDC1BC6CE4AEE270AD3 /* Pods_AuthenticationService.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB17B04009D0AEC49503632D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				505303F5A37B5EFA81FE52CF /* Pods-AuthenticationService.debug.xcconfig */,
+				727D2A7A84C8BA792F61C966 /* Pods-AuthenticationService.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../endi/ios/Pods;
 			sourceTree = "<group>";
 		};
 		E63C7DB026FB4860007F7179 = {
@@ -115,7 +115,7 @@
 				E63C7DBB26FB4860007F7179 /* Products */,
 				C1D663F33FEE34AC7380D897 /* Frameworks */,
 				E63C7E2426FB89EE007F7179 /* Recovered References */,
-				16BD56F965420CECC9707051 /* Pods */,
+				DB17B04009D0AEC49503632D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,7 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E63C7DCE26FB4861007F7179 /* Build configuration list for PBXNativeTarget "AuthenticationService" */;
 			buildPhases = (
-				B6DB6108F121DD3801F32865 /* [CP] Check Pods Manifest.lock */,
+				BF593337AC9F69E9D27BFCD6 /* [CP] Check Pods Manifest.lock */,
 				E63C7DB526FB4860007F7179 /* Headers */,
 				E63C7DB626FB4860007F7179 /* Sources */,
 				E63C7DB726FB4860007F7179 /* Frameworks */,
@@ -303,7 +303,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B6DB6108F121DD3801F32865 /* [CP] Check Pods Manifest.lock */ = {
+		BF593337AC9F69E9D27BFCD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -488,7 +488,7 @@
 		};
 		E63C7DCF26FB4861007F7179 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A731D8E013C7AFC4C0616CFB /* Pods-AuthenticationService.debug.xcconfig */;
+			baseConfigurationReference = 505303F5A37B5EFA81FE52CF /* Pods-AuthenticationService.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -516,7 +516,7 @@
 		};
 		E63C7DD026FB4861007F7179 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10FF793E0F9250E6C3F63405 /* Pods-AuthenticationService.release.xcconfig */;
+			baseConfigurationReference = 727D2A7A84C8BA792F61C966 /* Pods-AuthenticationService.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
