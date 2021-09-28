@@ -212,6 +212,7 @@ extension AppleAuthController: ASAuthorizationControllerDelegate,
           fatalError("Invalid state: A login callback was received, but no login request was sent.")
         #else
           self.delegate?.authenticator(self, didErrorWith: appleError)
+          return
         #endif
       }
       guard let appleIDToken = appleIDCredential.identityToken else {
