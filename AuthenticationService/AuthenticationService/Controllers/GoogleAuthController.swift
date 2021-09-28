@@ -80,6 +80,7 @@ extension GoogleAuthController: Authenticator {
 
   public func configure(_ user: User?) {
     if let currentUser = user {
+      self.user.setUserID(id: currentUser.uid)
       if let googleUser = GIDSignIn.sharedInstance.currentUser {
         if let profile = googleUser.profile {
           if let name = profile.givenName {
