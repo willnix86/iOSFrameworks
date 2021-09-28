@@ -106,11 +106,6 @@ extension GoogleAuthController: Authenticator {
           changeProfilePicURL(to: url)
         }
       }
-//      if let profilePic = PersistenceController.shared.fetchProfilePic() {
-//        changeProfilePicData(to: profilePic)
-//      } else {
-        
-//      }
       delegate?.authenticator(self, didUpdateStateTo: .authenticated)
     } else {
       delegate?.authenticator(self, didUpdateStateTo: .unauthenticated)
