@@ -24,13 +24,16 @@ public class AppleAuthController: NSObject {
     super.init()
     if appWindow != nil {
       window = appWindow
+    }
 
-      configure(Auth.auth().currentUser)
+    if let user = Auth.auth().currentUser {
+        configure(user)
+    }
 
-      Auth.auth().addStateDidChangeListener { [self] (auth, currentUser) in
+  Auth.auth().addStateDidChangeListener { [self] (auth, currentUser) in
+      guard user.userID == nil else { return }
         configure(Auth.auth().currentUser)
       }
-    }
   }
 }
 
@@ -53,7 +56,7 @@ extension AppleAuthController {
 
 extension AppleAuthController: Authenticator {
   public func signIn() {
-    if let credential = credential {
+   if let credential = credential {
       Auth.auth().signIn(with: credential) { [self] (authResult, authError) in
         if let error = authError as NSError? {
           delegate?.authenticator(self, didUpdateStateTo: .unauthenticated)

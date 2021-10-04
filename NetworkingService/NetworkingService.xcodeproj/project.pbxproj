@@ -11,7 +11,6 @@
 		246049DE266969EF0074E0E7 /* GenericDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246049DD266969EE0074E0E7 /* GenericDecoder.swift */; };
 		246049E226696A870074E0E7 /* NetworkingServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246049E126696A870074E0E7 /* NetworkingServiceError.swift */; };
 		24C8D9DB2632DE2E00887D44 /* NetworkingService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C8D9D12632DE2E00887D44 /* NetworkingService.framework */; };
-		24C8D9E02632DE2E00887D44 /* NetworkingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8D9DF2632DE2E00887D44 /* NetworkingServiceTests.swift */; };
 		24C8D9E22632DE2E00887D44 /* NetworkingService.h in Headers */ = {isa = PBXBuildFile; fileRef = 24C8D9D42632DE2E00887D44 /* NetworkingService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C8DA172632E5DC00887D44 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8DA162632E5DC00887D44 /* HTTPClient.swift */; };
 		24C8DA1B2632E80900887D44 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8DA1A2632E80900887D44 /* URLSessionHTTPClient.swift */; };
@@ -35,8 +34,6 @@
 		24C8D9D42632DE2E00887D44 /* NetworkingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingService.h; sourceTree = "<group>"; };
 		24C8D9D52632DE2E00887D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C8D9DA2632DE2E00887D44 /* NetworkingServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		24C8D9DF2632DE2E00887D44 /* NetworkingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceTests.swift; sourceTree = "<group>"; };
-		24C8D9E12632DE2E00887D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C8DA162632E5DC00887D44 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		24C8DA1A2632E80900887D44 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				24C8D9D32632DE2E00887D44 /* NetworkingService */,
-				24C8D9DE2632DE2E00887D44 /* NetworkingServiceTests */,
 				24C8D9D22632DE2E00887D44 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,15 +86,6 @@
 				246049E126696A870074E0E7 /* NetworkingServiceError.swift */,
 			);
 			path = NetworkingService;
-			sourceTree = "<group>";
-		};
-		24C8D9DE2632DE2E00887D44 /* NetworkingServiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				24C8D9DF2632DE2E00887D44 /* NetworkingServiceTests.swift */,
-				24C8D9E12632DE2E00887D44 /* Info.plist */,
-			);
-			path = NetworkingServiceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C8D9E02632DE2E00887D44 /* NetworkingServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +227,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -305,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
